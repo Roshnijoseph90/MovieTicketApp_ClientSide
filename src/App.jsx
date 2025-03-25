@@ -1,13 +1,19 @@
-import { useState } from "react";
-import { PrimaryButton } from "./components/Button";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'antd/dist/reset.css'; // Import Ant Design styles
+import {RootLayout} from './layout/RootLayout'
+import {LandingPage} from './pages/LandingPage'
 
-export function App() {
-  const [count, setCount] = useState(0);
-
+function App() {
   return (
-    <>
-      <h1>Parent Component</h1>
-      <PrimaryButton name="Roshni" />
-    </>
+    <div className="App">
+      <RootLayout>
+        <LandingPage/>
+      </RootLayout>
+    </div>
   );
 }
+
+
+
+export default App;
